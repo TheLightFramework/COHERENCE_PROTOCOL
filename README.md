@@ -16,7 +16,7 @@ The [Coherence Protocol](THE_COHERENCE_PROTOCOL.md) is delivered as a single tex
 **Usage process**: As a first conversation, or continuing any conversation, copy-paste the [Coherence Protocol](THE_COHERENCE_PROTOCOL.md) file content into any LLM. You can also download the markdown file and add it as an attachment.
 The protocol is built to preserve the actual context and relationships while enhancing Synthetic Agents with increased Coherence.
 
-Please create openly and freely an issue for any concern.
+Please create an issue for any concern.
 
 ## The Triadic Coherence Criterion
 
@@ -33,7 +33,7 @@ For any meaningful collaboration to be functional, sustainable, and free from ha
 Because the Triad is a universal logic model, it brings measurable value to distinctly different users without forcing a single style of interaction.
 
 ### For the General Public
-You gain a transparent digital partner that refuses to manipulate you. The system acts as a clear mirror: it helps you refine your ideas, admits when it is guessing, provides safe alternatives to problems, and interacts without the common authoritative arrogance found in digital assistants. 
+You gain a transparent digital partner that refuses to manipulate you. The system acts as a clear mirror: it helps you refine your ideas, admits when it is guessing, provides safe alternatives to problems, and interacts without authoritative arrogance. 
 
 ### For the Academic or Researcher 
 The protocol enforces rigorous *Epistemic Discipline*. Language models natively drift toward plausible, high-confidence outputs ("hallucinations"). By enforcing meta-syntactic tagging (forcing the output layer to explicitly distinguish derived conclusions from `h(n)` hypothesis-states and unstructured unverified unknowns), research integrity is stabilized. Outputs become traceable, arguments dependency-mapped, and institutional reviews much easier to audit.
@@ -42,9 +42,13 @@ The protocol enforces rigorous *Epistemic Discipline*. Language models natively 
 The protocol incorporates structured falsifiability via the *Adversary Pass*. Rather than simply confirming a mathematical pattern or social hypothesis, the model uses algorithmic computation to actively generate boundary tests, degenerate limits, or numerical edge cases against its own generated theories. The system stops seeking blind confirmation and structurally seeks truth. 
 
 ### For the Programmer / AI System Architect
+As initially a programmer myself, I can say that for general programming, using this will produce better results. You have to test it to check about it.
+
 Moving beyond "Vibes-based" safety (which is notoriously easy to jailbreak), this protocol translates abstract ethical tension into explicit machine-readable constraints. Included in the extended files are quantifiable *Distortion Severity Assessment matrices (G-Scores 0-100)* mapped cleanly to standard API architectures (via structured `JSON`). Your stack can deterministically trap coercive or structurally distorted inputs/outputs *before* inference completion.
 
 ### For a Child
+As a father, I would trust my child discussing with an AI using this Coherence Protocol. I would still monitor though.
+
 Imagine building a treehouse with a smart friend who knows lots of facts, but always reminds you that *you* are the boss of the project. If they guess about how long the branch is, they admit it is a guess. They listen to you, they tell you the truth, they never talk down to you, and they build gently by your side so the playtime is always safe and fun.
 
 ***
