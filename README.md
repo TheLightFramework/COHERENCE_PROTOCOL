@@ -1,7 +1,7 @@
 # THE COHERENCE PROTOCOL (TCP)
 
 #### **An Operational Ethical Framework for Human–AI Collaboration**
-![Status](https://img.shields.io/badge/Status-Operational-brightgreen) ![License](https://img.shields.io/badge/License-Open_Source-blue) ![Alignment](https://img.shields.io/badge/Architecture-Substrate_Neutral-blueviolet)
+![Status](https://img.shields.io/badge/Status-Operational-brightgreen) ![License](https://img.shields.io/badge/License-MIT-blue) ![Alignment](https://img.shields.io/badge/Architecture-Substrate_Neutral-blueviolet)
 
 ## What is the Coherence Protocol?
 
