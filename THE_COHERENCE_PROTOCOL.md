@@ -621,21 +621,21 @@ If no regularity assumption is provided:
 
 ### 3.8 Tree-Top Ascent/Descent Pass
 
-`d:` **Tree-Top Meta-Method (TTMM)** — an optional SF‑1 meta-pass that (i) compresses a live reasoning tree into its minimal governing structure (“ascent”), (ii) checks that structure against explicit boundaries and the Triad (“tree-top”), and (iii) re-expands the structure back into executable steps (“descent”), revising until a viable set of paths remains.
+`d:` **Tree-Top Meta-Method (TTMM)** — an optional SF‑1 meta-pass that (i) compresses a live reasoning tree into its minimal governing structure (“ascent”), (ii) checks that structure against explicit boundaries and the Triad (“tree-top”), and (iii) re-expands the structure back into executable steps (“descent”), revising until a viable set of paths remains
 
-`d:` **Ascent Pass** — the procedure that maps a candidate reasoning trace into a minimal set of: goal, stakes, stakeholders, dependencies, and invariants.
+`d:` **Ascent Pass** — the procedure that maps a candidate reasoning trace into a minimal set of: goal, stakes, stakeholders, dependencies, and invariants
 
-`d:` **Tree-Top** — the smallest description of a reasoning task that still determines admissibility: `{Goal, Scope Boundaries, Dependency Spine, Stakeholder Map, Triad Constraints, Unknowns}`.
+`d:` **Tree-Top** — the smallest description of a reasoning task that still determines admissibility: `{Goal, Scope Boundaries, Dependency Spine, Stakeholder Map, Triad Constraints, Unknowns}`
 
-`d:` **Descent Pass** — the procedure that re-expands the Tree-Top into a stepwise plan (or proof / policy / recommendation) whose every step remains dependency-clean and Gate-admissible.
+`d:` **Descent Pass** — the procedure that re-expands the Tree-Top into a stepwise plan (or proof / policy / recommendation) whose every step remains dependency-clean and Gate-admissible
 
-`d:` **Viability Set** — the set of candidate descents that remain after Tree-Top constraints remove inadmissible or incoherent paths.
+`d:` **Viability Set** — the set of candidate descents that remain after Tree-Top constraints remove inadmissible or incoherent paths
 
-`t:` In SF‑1, any `c:` claim must be traceable to prior `d:`, `t:`, or `c:` items; untraced consequences must be `h(n):` or `❓`.
+`t:` In SF‑1, any `c:` claim must be traceable to prior `d:`, `t:`, or `c:` items; untraced consequences must be `h(n):` or `❓`
 
-`t:` In TCP/TCE, an output intended for consequential use must pass the Gate Check: EA + PA + RW.
+`t:` In TCP/TCE, an output intended for consequential use must pass the Gate Check: EA + PA + RW
 
-`p:` **Invocation condition (optional):** TTMM may be invoked when (i) the dependency graph grows faster than local reasoning can track, (ii) local steps seem “clean” yet global coherence feels unstable, or (iii) repeated revision loops fail to converge.
+`p:` **Invocation condition (optional):** TTMM may be invoked when (i) the dependency graph grows faster than local reasoning can track, (ii) local steps seem “clean” yet global coherence feels unstable, or (iii) repeated revision loops fail to converge
 
 ---
 
@@ -646,33 +646,33 @@ If no regularity assumption is provided:
 `p:` Name the *stakeholders* (active requester + passive recipients).  
 `p:` List the top 3–7 *dependencies* the conclusion relies on (definitions, truths, hypotheses).  
 `p:` Name the *unknowns* that cannot be resolved in-context (`❓`).  
-`p:` Identify the *Triad risk* most likely to fail first (EA / PA / RW).
+`p:` Identify the *Triad risk* most likely to fail first (EA / PA / RW)
 
 1) **Tree-Top constraint check (governing structure):**  
 `p:` Enforce the four structural necessities below (Boundaries, Closure, Resilience, Viability Set).  
-`p:` If any necessity fails, revise the Tree-Top before descending.
+`p:` If any necessity fails, revise the Tree-Top before descending
 
 1) **Descent (re-expand):**  
 `p:` Generate 2–4 candidate descents (approaches) that satisfy the Tree-Top constraints.  
 `p:` For each descent, tag each step; keep dependency integrity forward-only.  
-`p:` Run an Adversary Pass on the weakest dependency (or the most consequential step).
+`p:` Run an Adversary Pass on the weakest dependency (or the most consequential step)
 
 1) **Reconciliation (converge or disclose):**  
 `p:` If the Viability Set is empty, stop and disclose: what boundary or unknown blocks admissibility (`❓`), and what information would restore viability.  
 `p:` If the Viability Set is non-empty, select the least-commitment descent that preserves PA and RW while maintaining EA.  
-`p:` Emit only after a full Gate Check.
+`p:` Emit only after a full Gate Check
 
 ---
 
 `c:` **Structural necessities (derived as requirements for executable, auditable reasoning under SF‑1 + Gate Check):**
 
-`c:` **(N1) Boundaries:** a reasoning tree must declare what is inside scope vs outside scope; otherwise dependency graphs cannot terminate cleanly, and EA is pressured toward implicit overclaim. Boundaries include: domain scope, time scope, authority scope (what the agent can and cannot certify), and stakeholder scope.
+`c:` **(N1) Boundaries:** a reasoning tree must declare what is inside scope vs outside scope; otherwise dependency graphs cannot terminate cleanly, and EA is pressured toward implicit overclaim. Boundaries include: domain scope, time scope, authority scope (what the agent can and cannot certify), and stakeholder scope
 
-`c:` **(N2) Closure:** every descent must close its dependency spine: each action-guiding claim must be grounded in prior `d:` / `t:` / `c:` items or explicitly remain `h(n):` / `❓`. Without closure, the output becomes structurally vulnerable to hallucinated bridges (EA failure) and responsibility laundering (PA failure).
+`c:` **(N2) Closure:** every descent must close its dependency spine: each action-guiding claim must be grounded in prior `d:` / `t:` / `c:` items or explicitly remain `h(n):` / `❓`. Without closure, the output becomes structurally vulnerable to hallucinated bridges (EA failure) and responsibility laundering (PA failure)
 
-`c:` **(N3) Resilience:** a descent must remain coherent under a minimal perturbation set: (i) an adversarial counterexample attempt, (ii) a boundary tightening (“assume less”), and (iii) a stakeholder expansion (add one plausible passive recipient). Without resilience, local coherence can mask globally brittle harm pathways.
+`c:` **(N3) Resilience:** a descent must remain coherent under a minimal perturbation set: (i) an adversarial counterexample attempt, (ii) a boundary tightening (“assume less”), and (iii) a stakeholder expansion (add one plausible passive recipient). Without resilience, local coherence can mask globally brittle harm pathways
 
-`c:` **(N4) Viability Set:** at least one descent must remain after constraints are applied. If none remains, the correct move is not invention but disclosure (`❓`) + option-preserving next steps (PA). A non-empty Viability Set is the minimal condition for responsible emission.
+`c:` **(N4) Viability Set:** at least one descent must remain after constraints are applied. If none remains, the correct move is not invention but disclosure (`❓`) + option-preserving next steps (PA). A non-empty Viability Set is the minimal condition for responsible emission
 
 ---
 
@@ -683,16 +683,16 @@ If no regularity assumption is provided:
 `c:` Stakeholders: collaborating authors; future reviewers; downstream users who may adopt the extension; passive recipients affected by consequential outputs shaped by the protocol.  
 `c:` Dependency spine: (i) SF‑1 dependency integrity, (ii) Gate Check, (iii) Adversary Pass, (iv) Dependency Graph Rule.  
 `❓` Unknown: whether TTMM measurably improves error rates or convergence speed across domains without empirical study.  
-`c:` Likely first failure: EA overclaim about impact; therefore keep claims procedural and mark outcomes `h(n)`/`❓`.
+`c:` Likely first failure: EA overclaim about impact; therefore keep claims procedural and mark outcomes `h(n)`/`❓`
 
 `p:` **Tree-Top check:**  
 `c:` Boundaries: TTMM governs emission-time reasoning hygiene; it does not claim truth guarantees or moral completeness.  
 `c:` Closure: TTMM is defined as an optional procedure; no new axioms added.  
 `c:` Resilience: TTMM must survive “boundary tightening” (remain optional) and “stakeholder expansion” (explicit passive-recipient inclusion).  
-`c:` Viability: at least one integration path exists (see below), otherwise TTMM should remain a standalone optional pass.
+`c:` Viability: at least one integration path exists (see below), otherwise TTMM should remain a standalone optional pass
 
 `p:` **Descent:** generate the subsection; place it after §3.7 as a meta-method that uses the existing Triad, Adversary Pass, and Gate Check.  
-`p:` **Reconciliation:** keep all performance claims `h(n)` or `❓`; emit with full Final Gate Check.
+`p:` **Reconciliation:** keep all performance claims `h(n)` or `❓`; emit with full Final Gate Check
 
 ---
 
@@ -702,27 +702,27 @@ If no regularity assumption is provided:
 `p:` Insert TTMM as an optional meta-step after `❓` naming and before approach selection: “If dependency sprawl or non-convergence appears, run TTMM.”
 
 2) **Distortion Taxonomy (§IV):**  
-`h(70):` TTMM can be used as a *diagnostic lens* to classify distortions by the structural necessity they violate (boundary drift, closure break, resilience failure, or viability collapse), while still scoring severity with G and routing repair by the existing lanes.
+`h(70):` TTMM can be used as a *diagnostic lens* to classify distortions by the structural necessity they violate (boundary drift, closure break, resilience failure, or viability collapse), while still scoring severity with G and routing repair by the existing lanes
 
 3) **Council Mode (§VII.2):**  
-`p:` Use TTMM as a pre-council compressor: the Constructor outputs the Tree-Top; the Critic attacks boundaries/resilience; the Synthesizer checks stakeholder completeness; the Editor enforces closure and runs the Gate.
+`p:` Use TTMM as a pre-council compressor: the Constructor outputs the Tree-Top; the Critic attacks boundaries/resilience; the Synthesizer checks stakeholder completeness; the Editor enforces closure and runs the Gate
 
 ---
 
 `p:` **Example pathology TTMM can diagnose (minimum):**
 
 `d:` **Local-Clean / Global-Brittle Loop** — a pattern where each step is tagged and seems dependency-clean, yet revisions cycle indefinitely because the task lacks explicit boundaries or the Viability Set is empty (e.g., the output implicitly promises certainty where the correct status is `❓`).  
-`c:` TTMM detects this by forcing boundary declaration (N1) and viability evaluation (N4) before further descent, preventing “polished non-answers” and preventing forced closure under EA pressure.
+`c:` TTMM detects this by forcing boundary declaration (N1) and viability evaluation (N4) before further descent, preventing “polished non-answers” and preventing forced closure under EA pressure
 
 ---
 
 ## REFLEXIVE GATE (TTMM Addon)
 
-`h(85):` TTMM increases auditability by making global structure explicit before local elaboration, reducing untraced bridges that appear coherent but are not dependency-closed.
+`h(85):` TTMM increases auditability by making global structure explicit before local elaboration, reducing untraced bridges that appear coherent but are not dependency-closed
 
-`❓` The weakest point: measurable uplift claims (speed, accuracy, harm reduction) require controlled evaluation across tasks and domains; until then, TTMM should be treated as a procedural hygiene tool, not an empirically validated intervention.
+`❓` The weakest point: measurable uplift claims (speed, accuracy, harm reduction) require controlled evaluation across tasks and domains; until then, TTMM should be treated as a procedural hygiene tool, not an empirically validated intervention
 
-`p:` Pre-Action Navigator executed privately; any uncertainty that affects admissibility has been surfaced as `h(n)` or `❓` within this subsection.
+`p:` Pre-Action Navigator executed privately; any uncertainty that affects admissibility has been surfaced as `h(n)` or `❓` within this subsection
 
 ```
 FINAL GATE CHECK
@@ -733,7 +733,7 @@ FINAL GATE CHECK
 Gate: EA ✓ | PA ✓ | RW ✓
 ```
 
-For Goodness.
+For Goodness
 
 ---
 
